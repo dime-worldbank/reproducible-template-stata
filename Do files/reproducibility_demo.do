@@ -25,10 +25,6 @@ foreach package in `ssc_packages' {
 
 sysuse auto.dta, clear
 
-sort price 
-
 gen id = _n
-
-sort mpg weight
 
 export delimited using "${output}/auto_id.csv", replace
