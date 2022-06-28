@@ -23,8 +23,24 @@ foreach package in `ssc_packages' {
 	}
 }
 
+*** First, we run the code without setting a seed. 
+
+* set seed 294343
+
+***
+
+* Let's see what happens 
+
 sysuse auto.dta, clear
 
-gen id = _n
+reg price mpg i.foreign, vce(bootstrap)
 
-export delimited using "${output}/auto_id.csv", replace
+eststo reg1
+
+coefplot
+
+graph export "${output}/graph.png", replace
+
+esttab reg1 using "${output}/table.csv" , se replace
+
+esttab reg1 using "${output}/table.tex", se replace
