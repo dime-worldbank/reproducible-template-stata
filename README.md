@@ -17,7 +17,7 @@
  2. Look at changes on GH
  3. Commit changes
 
-#### Now, uncomment Line 47 on the code.
+## Now, uncomment Line 47 on the code.
 
 #### Fourth run
 1. Run do-file again
