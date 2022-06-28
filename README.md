@@ -13,17 +13,17 @@
  2. Look at the changes on GitHub Desktop.
  3. Commit again.
 #### Third run
- 1. Run do-file again
- 2. Look at changes on GH
- 3. Commit changes
+ 1. Run do-file again.
+ 2. Look at changes on GH.
+ 3. Commit changes.
 
 ### Now, uncomment Line 47 on the code.
 
 #### Fourth run
-1. Run do-file again
-2. Look at changes on GH
-3. Commit changes
+1. Run do-file again.
+2. Look at changes on GH.
+3. Commit changes.
 
 #### Fifth run
-1. Run do-file again
+1. Run do-file again.
 2. There should be no changes now!
