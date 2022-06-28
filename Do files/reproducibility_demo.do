@@ -29,4 +29,6 @@ sort price
 
 gen id = _n
 
+sort mpg weight
+
 export delimited using "${output}/auto_id.csv", replace
