@@ -1,2 +1,2 @@
-# ce_session
- Repo for Reproducibility in Stata CE Session
+# Instructions for the demo
+ 
