@@ -67,7 +67,7 @@ eststo reg1
 
 coefplot
 
-*** Export to .PNG. Always use .PNG to track changes to graphs. 
+*** Export to .PNG. 
 
 graph export "${output}/graph.png", replace
 
