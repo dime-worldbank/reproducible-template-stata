@@ -45,7 +45,7 @@ foreach package in `ssc_packages' {
 *** First, we run the code without setting a seed. So this part of the code has 
 *** been commented out. We will later come back to Line 48.
 
-* set seed 294343 // Generated using https://bit.ly/stata-random
+set seed 928381 // Generated using https://bit.ly/stata-random
 
 ***
 
