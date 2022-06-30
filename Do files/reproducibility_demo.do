@@ -1,5 +1,5 @@
 ********************************************************************************
-***          DEMO Code for Common Reproducibility Mistakes in Stata          ***
+***    DEMO Code for CE Session: Common Reproducibility Mistakes in Stata    ***
 ********************************************************************************
 
 
@@ -9,7 +9,7 @@
 * USER SETTINGS 
 ********************************************************************************
  
-  ieboilstart, v(14.0) 
+  ieboilstart, v(14.0) // Sets the same version for whoever runs the code
   `r(version)'
   
   
