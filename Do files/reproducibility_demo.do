@@ -25,7 +25,7 @@ global output "${github}/Outputs"
 
 // Packages 
 
-local ssc_packages estout ietoolkit 
+local ssc_packages estout 
 
 foreach package in `ssc_packages' {
 	capture which `package'
@@ -33,6 +33,10 @@ foreach package in `ssc_packages' {
 		ssc install `package', replace
 	}
 }
+
+// Install user-written commands - in this case we use the example of ietoolkit
+
+sysdir set PLUS "c:\ado\plus\ietoolkit.ado"
 
 ********************************************************************************
 * CODE
