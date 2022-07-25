@@ -2,41 +2,26 @@
 ***    DEMO Code for CE Session: Common Reproducibility Mistakes in Stata    ***
 ********************************************************************************
 
-
-* Master Scripts should be set up like this: 
-
 ********************************************************************************
 * USER SETTINGS 
 ********************************************************************************
- 
-  ieboilstart, v(14.0) // Sets the same version for whoever runs the code
-  `r(version)'
-  
   
 // Working directory -----------------------------------------------------------
 
-global github "C:/Users/wb554347/OneDrive - WBG/GitHub/ce_session"
+global github 	"C:\Users\wb501238\Documents\GitHub\reproducible-template-stata"
 
 // Sub-folders
 
-global do "${github}/Do files"
-
-global output "${github}/Outputs"
+global do 		"${github}/Code"
+global output 	"${github}/Output"
 
 // Packages 
+sysdir set PLUS "${github}/Code/ado"
 
-local ssc_packages estout 
+// Version ---------------------------------------------------------------------
 
-foreach package in `ssc_packages' {
-	capture which `package'
-	if _rc != 0 {
-		ssc install `package', replace
-	}
-}
-
-// Install user-written commands - in this case we use the example of ietoolkit
-
-sysdir set PLUS "c:\ado\plus\ietoolkit.ado"
+  ieboilstart, v(14.0) // Sets the same version for whoever runs the code
+  `r(version)'
 
 ********************************************************************************
 * CODE
@@ -51,9 +36,6 @@ sysdir set PLUS "c:\ado\plus\ietoolkit.ado"
 
 set seed 928381 // Generated using https://bit.ly/stata-random
 
-***
-
-
 *** Load one of Stata's system datasets.
 
 sysuse auto.dta, clear
@@ -61,6 +43,7 @@ sysuse auto.dta, clear
 *** Run a regression that involves bootstrapping. This is the part of the code
 *** where Stata uses a random number generator in the background.
 
+isid make, sort
 reg price mpg i.foreign, vce(bootstrap)
 
 *** Store regression results in an object.
